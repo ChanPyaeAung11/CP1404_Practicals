@@ -1,7 +1,6 @@
 def main():
 
-    password = password_count(input("Input the password: "))
-    password_check(password)
+    password_check(password_count(input("Input the password: ")))
 
 
 def password_count(password):
