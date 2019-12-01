@@ -1,8 +1,8 @@
 def main():
 
-password = input("Input the password: ")
-for i in password:
-    print("*", end="")
+    password = input("Input the password: ")
+    for i in password:
+        print("*", end="")
 
 
 main()
