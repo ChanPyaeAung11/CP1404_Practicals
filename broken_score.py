@@ -1,14 +1,17 @@
 def main():
 
-    score = float(input("Enter score: "))
+    print(broken_score(float(input("Enter score: "))))
+
+
+def broken_score(score):
     if 0 > score or score > 100:
-        print("Invalid score")
+        return "Invalid score"
     elif 50 <= score <= 90:
-        print("Passable")
+        return "Passable"
     elif score > 90:
-        print("Excellent")
+        return "Excellent"
     else:
-        print("Bad")
+        return "Bad"
 
 
 main()
