@@ -6,7 +6,7 @@ def main():
     MENU = "\n MENU \n C - Convert Celsius to Fahrenheit \n F - Convert Fahrenheit to Celsius \n Q - Quit"
     print(MENU)
     choice = input(">>> ").upper()
-    print(temperature_change(choice, MENU))
+    print(temperature_change(choice))
 
     score = num_check("Enter score: ")
     print(broken_score(score))
@@ -17,7 +17,7 @@ def password_check(password):
         print("*", end="")
 
 
-def temperature_change(choice, MENU):
+def temperature_change(choice):
     while choice != "Q":
         if choice == "C":
             ask_celsius = float(input("Celsius: "))
@@ -30,7 +30,7 @@ def temperature_change(choice, MENU):
         else:
             print("Invalid Option")
         choice = input(">>> ").upper()
-    print("Thank you.")
+    return "Thank you."
 
 
 def broken_score(score):
