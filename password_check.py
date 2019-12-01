@@ -1,6 +1,6 @@
 def main():
 
-    password = input("Input the password: ")
+    password = password_count(input("Input the password: "))
     password_check(password)
 
     MENU = "\n MENU \n C - Convert Celsius to Fahrenheit \n F - Convert Fahrenheit to Celsius \n Q - Quit"
@@ -10,6 +10,12 @@ def main():
 
     score = num_check("Enter score: ")
     print(broken_score(score))
+
+
+def password_count(password):
+    while len(password) < 6:
+        password = password_count(input("Password must be at least 6 words. >>>"))
+    return password
 
 
 def password_check(password):
