@@ -15,24 +15,4 @@ def password_check(password):
         print("*", end="")
 
 
-def broken_score(score):
-    if 0 > score or score > 100:
-        return "Invalid score"
-    elif 50 <= score <= 90:
-        return "Passable"
-    elif score > 90:
-        return "Excellent"
-    else:
-        return "Bad"
-
-
-def num_check(prompt):
-    while True:
-        try:
-            score = float(input(prompt))
-            return score
-        except ValueError:
-            print("Enter numbers only")
-
-
 main()
