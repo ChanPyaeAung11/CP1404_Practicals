@@ -19,8 +19,7 @@ def temperature_change(choice):
             return "Result: {:.2f} C ".format(calc_celsius)
         else:
             print("Invalid option")
-        print(MENU)
-        choice = input(">>> ").upper()
+        choice = input("Choose ").upper()
     print("Thank you.")
 
 

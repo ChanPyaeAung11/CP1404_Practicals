@@ -3,8 +3,6 @@ def main():
     password = password_count(input("Input the password: "))
     password_check(password)
 
-    print(broken_score(random.randint(0, 100)))
-
 
 def password_count(password):
     while len(password) < 6:
