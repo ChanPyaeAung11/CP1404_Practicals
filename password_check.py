@@ -11,8 +11,7 @@ def main():
     choice = input(">>> ").upper()
     print(temperature_change(choice))
 
-    score = random.randint(0, 100)
-    print(broken_score(score))
+    print(broken_score(random.randint(0, 100)))
 
 
 def password_count(password):
