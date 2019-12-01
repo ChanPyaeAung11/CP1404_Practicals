@@ -1,3 +1,6 @@
+import random
+
+
 def main():
 
     password = password_count(input("Input the password: "))
@@ -8,13 +11,13 @@ def main():
     choice = input(">>> ").upper()
     print(temperature_change(choice))
 
-    score = num_check("Enter score: ")
+    score = random.randint(0, 100)
     print(broken_score(score))
 
 
 def password_count(password):
     while len(password) < 6:
-        password = password_count(input("Password must be at least 6 words. >>>"))
+        password = password_count(input("Password must be at least 6 words. \n >>>"))
     return password
 
 
