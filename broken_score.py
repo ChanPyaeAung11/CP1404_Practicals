@@ -3,8 +3,8 @@ import random
 
 def main():
     score = random.randint(0, 105)
-    print(score)
-    print(broken_score(num_check(random.randint(0, 105))))
+    print("Score is" + str(score) + ".")
+    print(broken_score(num_check(score)))
 
 
 def broken_score(score):
