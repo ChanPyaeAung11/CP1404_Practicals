@@ -1,6 +1,10 @@
-def main():
+import random
 
-    print(broken_score(num_check("Enter score: ")))
+
+def main():
+    score = random.randint(0, 105)
+    print(score)
+    print(broken_score(num_check(random.randint(0, 105))))
 
 
 def broken_score(score):
@@ -14,10 +18,10 @@ def broken_score(score):
         return "Bad"
 
 
-def num_check(prompt):
+def num_check(score):
     while True:
         try:
-            score = int(input(prompt))
+            score = int(score)
             return score
         except ValueError:
             print("Enter integers only")
