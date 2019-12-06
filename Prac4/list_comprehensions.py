@@ -27,7 +27,7 @@ print(full_initials)
 a_names = [name for name in names if name.startswith('A')]
 print(a_names)
 
-
+print()
 lower_full_names = [name.lower() for name in full_names]
 print(lower_full_names)
 
