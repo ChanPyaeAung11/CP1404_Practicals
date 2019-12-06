@@ -4,4 +4,3 @@ numbers[-1] = 1
 print(numbers)
 print(numbers[2:])
 print(9 in numbers)
-
