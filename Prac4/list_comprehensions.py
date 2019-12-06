@@ -28,8 +28,7 @@ a_names = [name for name in names if name.startswith('A')]
 print(a_names)
 
 print()
-lower_full_names = [name.lower() for name in full_names]
-print(lower_full_names)
+print([name.lower() for name in full_names])
 
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 numbers = [int(num) for num in almost_numbers]
