@@ -11,8 +11,6 @@ for i in splited:
 to_sort = list(dict.keys())
 to_sort.sort()
 
-print(to_sort)
-
 max_length = max(len(word) for word in to_sort)
 for word in to_sort:
     print("{:{}} : {}".format(word, max_length, dict[i]))
