@@ -1,5 +1,5 @@
 # import ProgrammingLanguage from programming_language.py
-from programming_language import ProgrammingLanguage
+from Prac6.programming_language import ProgrammingLanguage
 
 
 ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
