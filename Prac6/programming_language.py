@@ -1,5 +1,5 @@
 class ProgrammingLanguage:
-    """ takes in information given and return that in a form of strings"""
+    
     def __init__(self, name, typing, reflection, year):
         """ Use parameters passed in and constrcyt them """
         self.name = name
