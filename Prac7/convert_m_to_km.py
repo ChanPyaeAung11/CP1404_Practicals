@@ -13,14 +13,6 @@ __author__ = 'Lindsay Ward'
 MILES_TO_KM = 1.60934
 
 
-def convert_to_num(text):
-    try:
-        value = float(text)
-        return value
-    except ValueError:
-        return 0.0
-
-
 class MilesConverterApp(App):
     """ MilesConverterApp is a Kivy App for converting miles to kilometres """
     final_km = StringProperty()
@@ -31,31 +23,32 @@ class MilesConverterApp(App):
         self.root = Builder.load_file('convert_m_km.kv')
         return self.root
 
-    def handle_calculate(self):
+    def handle_calculate(self, text):
         """ handle calculation (could be button press or other call), output result to label widget """
-        value = self.get_validated_miles()
-        result = value * MILES_TO_KM
-        self.root.ids.output_label.text = str(result)
+        print("handle calc")
+        miles = self.convert_to_num(text)
+        self.update_result(miles)
 
-    def handle_increment(self, change):
+    def handle_increment(self, text, change):
         """
         handle up/down button press, update the text input with new value, call calculation function
-        :param change: the amount to change
         """
-        value = self.get_validated_miles() + change
-        self.root.ids.input_miles.text = str(value)
-        self.handle_calculate()
+        print("handle inc")
+        miles = self.convert_to_num(text) + change
+        self.root.ids.input_miles.text = str(miles)
 
-    def get_validated_miles(self):
-        """
-        get text input from text entry widget, convert to float
-        :return: 0 if error, float version of text if valid
-        """
+    def update_result(self, miles):
+        output_km = str(miles * MILES_TO_KM)
+        self.root.ids.output_label.text = str(output_km)
+
+    @staticmethod
+    def convert_to_num(text):
+        """Convert text to float or 0.0 if invalid."""
         try:
-            value = float(self.root.ids.input_miles.text)
+            value = float(text)
             return value
         except ValueError:
-            return 0
+            return 0.0
 
 
 MilesConverterApp().run()
