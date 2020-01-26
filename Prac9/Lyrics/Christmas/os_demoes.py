@@ -17,7 +17,6 @@ def main():
 
     # Make a new directory
     # The next time you run this, it will crash if the directory exists
-    # TODO: Use exception handling to avoid the crash (just pass)
     try:
         os.mkdir('temp')
     except FileExistsError:
@@ -32,10 +31,9 @@ def main():
         new_name = get_fixed_filename(filename)
         print("Renaming {} to {}".format(filename, new_name))
 
-        # TODO: Try these options one at a time
         # Option 1: rename file to new name - in place
         # os.rename(filename, new_name)
-
+        os.rename(filename, new_name)
         # Option 2: move file to new place, with new name
         # shutil.move(filename, 'temp/' + new_name)
 
@@ -63,4 +61,4 @@ def demo_walk():
 
 
 main()
-# demo_walk()
+demo_walk()
